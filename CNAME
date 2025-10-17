@@ -1,1 +1,4 @@
-sydneyonthego.com
+| Type                    | Host  | Value                           | TTL       |
+| ----------------------- | ----- | ------------------------------- | --------- |
+| **CNAME Record**        | `www` | `sydneyonthego.github.io`       | Automatic |
+| **URL Redirect Record** | `@`   | `https://www.sydneyonthego.com` | Unmasked  |
