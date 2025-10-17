@@ -141,12 +141,12 @@ nav {
 
 /* Sections */
 section {
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 section h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #1a1a1a;
 }
 
@@ -431,8 +431,8 @@ footer {
 /* Resume Page Styles */
 .resume-section {
     background: #fff;
-    margin-bottom: 2rem;
-    padding: 2rem 0;
+    margin-bottom: 1.5rem;
+    padding: 0;
 }
 
 .resume-header {
@@ -466,7 +466,7 @@ footer {
 }
 
 .experience-item, .education-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .job-header {
