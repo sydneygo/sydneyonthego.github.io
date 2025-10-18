@@ -130,6 +130,7 @@ nav {
     margin-bottom: 2rem;
 }
 
+/* (legacy hero text links, safe to keep) */
 .hero-links {
     display: flex;
     gap: 1.5rem;
@@ -345,6 +346,57 @@ footer {
     text-align: center;
 }
 
+/* ---------- Social Icons (Base) ---------- */
+/* rows */
+.social-icons,
+.footer-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+/* buttons */
+.icon-btn {
+    display: inline-flex;
+    width: 48px;       /* desktop/tablet size */
+    height: 48px;
+    border-radius: 9999px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.06);
+    text-decoration: none;
+    transition: transform 120ms ease, background 120ms ease;
+    outline-offset: 4px;
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    color: #111;
+}
+
+.icon-btn:hover,
+.icon-btn:focus-visible {
+    background: rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+/* footer variant (dark bg) */
+footer .icon-btn {
+    background: rgba(255,255,255,0.12);
+}
+footer .icon-btn:hover,
+footer .icon-btn:focus-visible {
+    background: rgba(255,255,255,0.2);
+}
+footer .icon-btn svg {
+    color: #fff;
+}
+
 /* Blog Page Styles */
 .blog-header {
     padding: 3rem 0 2rem;
@@ -527,54 +579,29 @@ footer {
         gap: 1rem;
     }
 
-    .social-icons, .footer-links { gap: 10px; }
-    .icon-btn { width: 40px; height: 40px; }
-    .icon-btn svg { width: 20px; height: 20px; }
-    
     .hero h1 {
         font-size: 2rem;
     }
-    
-    .icon-btn {
-        display: inline-flex;
-        width: 44px;
-        height: 44px;
-        border-radius: 9999px;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0,0,0,0.06);
-        text-decoration: none;
-        transition: transform 120ms ease, background 120ms ease;
-        outline-offset: 4px;
-    }
 
-    .icon-btn svg {
-        width: 22px;
-        height: 22px;
-        fill: currentColor;
-        color: #111;
-    }
-    
-    .icon-btn:hover,
-    .icon-btn:focus-visible {
-        background: rgba(0,0,0,0.12);
-        transform: translateY(-1px);
-    }
-    
     .profile-photo {
         width: 140px;
         height: 140px;
     }
-    
+
     section h2 {
         font-size: 1.6rem;
     }
-    
+
     .skills-grid,
     .work-links,
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Social icons: larger tap targets on phones */
+    .social-icons, .footer-links { gap: 12px; }
+    .icon-btn { width: 56px; height: 56px; }
+    .icon-btn svg { width: 28px; height: 28px; }
 }
 
 @media (max-width: 480px) {
