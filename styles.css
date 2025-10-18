@@ -74,17 +74,8 @@ nav {
 
 /* Hero Section */
 .hero {
-    padding: 4rem 0;
+    padding: 3rem 0 2rem;
     background: linear-gradient(135deg, #f5f7fa 0%, #fff 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-content{
-  display: flex;  
-  flex-direction: column;
-  align-items: center;
 }
 
 .hero-container {
@@ -113,40 +104,45 @@ nav {
 .tagline {
     font-size: 1.3rem;
     color: #666;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .intro {
     font-size: 1.1rem;
     color: #333;
-    margin-bottom: 1rem;
-    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
 }
 
-.intro-extended {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-/* (legacy hero text links, safe to keep) */
-.hero-links {
+.hero-social-icons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
-.hero-links a {
+.hero-social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
     color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.hero-links a:hover {
+.hero-social-icons a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     color: #000;
+}
+
+.hero-social-icons svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* Sections */
@@ -346,54 +342,20 @@ footer {
     text-align: center;
 }
 
-/* ---------- Social Icons (Base) ---------- */
-/* rows */
-.social-icons,
 .footer-links {
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    align-items: center;
+    gap: 2rem;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 1rem;
 }
 
-/* buttons */
-.icon-btn {
-    display: inline-flex;
-    width: 48px;       /* desktop/tablet size */
-    height: 48px;
-    border-radius: 9999px;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.06);
+.footer-links a {
+    color: #e5e5e5;
     text-decoration: none;
-    transition: transform 120ms ease, background 120ms ease;
-    outline-offset: 4px;
+    transition: color 0.3s;
 }
 
-.icon-btn svg {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-    color: #111;
-}
-
-.icon-btn:hover,
-.icon-btn:focus-visible {
-    background: rgba(0,0,0,0.12);
-    transform: translateY(-1px);
-}
-
-/* footer variant (dark bg) */
-footer .icon-btn {
-    background: rgba(255,255,255,0.12);
-}
-footer .icon-btn:hover,
-footer .icon-btn:focus-visible {
-    background: rgba(255,255,255,0.2);
-}
-footer .icon-btn svg {
+.footer-links a:hover {
     color: #fff;
 }
 
@@ -578,30 +540,25 @@ footer .icon-btn svg {
     .nav-links {
         gap: 1rem;
     }
-
+    
     .hero h1 {
         font-size: 2rem;
     }
-
+    
     .profile-photo {
         width: 140px;
         height: 140px;
     }
-
+    
     section h2 {
         font-size: 1.6rem;
     }
-
+    
     .skills-grid,
     .work-links,
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-
-    /* Social icons: larger tap targets on phones */
-    .social-icons, .footer-links { gap: 12px; }
-    .icon-btn { width: 56px; height: 56px; }
-    .icon-btn svg { width: 28px; height: 28px; }
 }
 
 @media (max-width: 480px) {
